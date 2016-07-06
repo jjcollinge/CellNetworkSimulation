@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/CellNetworkSimulation" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="NetworkEventsWebAPI_InstanceCount" Value="1" />
+    <Parameter Name="NetworkActivitySimulator_InstanceCount" Value="1" />
+    <Parameter Name="NetworkEventSource_PartitionCount" Value="1" />
+    <Parameter Name="NetworkEventSource_MinReplicaSetSize" Value="3" />
+    <Parameter Name="NetworkEventSource_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="NetworkProviderManagerService_PartitionCount" Value="1" />
+    <Parameter Name="NetworkProviderManagerService_MinReplicaSetSize" Value="3" />
+    <Parameter Name="NetworkProviderManagerService_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="UserManagementService_PartitionCount" Value="1" />
+    <Parameter Name="UserManagementService_MinReplicaSetSize" Value="3" />
+    <Parameter Name="UserManagementService_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="NetworkProviderService_PartitionCount" Value="1" />
+    <Parameter Name="NetworkProviderService_MinReplicaSetSize" Value="3" />
+    <Parameter Name="NetworkProviderService_TargetReplicaSetSize" Value="3" />
+  </Parameters>
+</Application>

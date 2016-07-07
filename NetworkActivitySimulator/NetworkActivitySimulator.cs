@@ -39,24 +39,16 @@ namespace NetworkActivitySimulator
             {
                 // Create a new mobile phone and register a network provided SIM 
                 // TODO: Change this to builder pattern
-                MobilePhone phone = new MobilePhone();
+                MobilePhone phone = new MobilePhone(await SIM.Create(networks.First()));
 
-                try
-                {
-                    phone.Sim = await SIM.Create(networks.First());
-                }
-                catch(Exception ex)
-                {
-                    ServiceEventSource.Current.Message($"[{_serviceName}][ERROR] Exception thrown whilst creating SIM: {ex.Message}");
-                    throw ex;
-                }
-
-                phone.Location = new Location()
+                phone.AddLocation(new Location()
                 {
                     Longitude = i * 10.0d,
                     Latitude = i * 10.0d,
                     Altitude = 2.0d
-                };
+                });
+
+
                 ServiceEventSource.Current.Message($"[{_serviceName}][INFO] Created mobile phone {phone.Sim.PhoneNumber}");
 
                 try

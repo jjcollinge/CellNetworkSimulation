@@ -11,10 +11,21 @@ namespace Common
     public class MobilePhone
     {
         [DataMember]
-        public SIM Sim { get; set; }
+        public SIM Sim { get; private set; }
         [DataMember]
-        public Location Location { get; set; }
+        public Location Location { get; private set; }
 
+        public MobilePhone(SIM sim)
+        {
+            Sim = sim;
+        }
+
+        public MobilePhone AddLocation(Location location)
+        {
+            Location = location;
+            return this;
+        }
+        
         public async Task Activate()
         {
             var networkProvider = ServiceFactory.CreateNetworkProviderProxy(Sim.NetworkProvider);

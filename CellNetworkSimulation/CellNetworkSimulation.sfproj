@@ -33,6 +33,7 @@
     <ProjectReference Include="..\NetworkProviderManagerService\NetworkProviderManagerService.csproj" />
     <ProjectReference Include="..\NetworkProviderService\NetworkProviderService.csproj" />
     <ProjectReference Include="..\UserManagementService\UserManagementService.csproj" />
+    <ProjectReference Include="..\WebApp\WebApp.xproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>

@@ -48,7 +48,6 @@ namespace NetworkActivitySimulator
                     Altitude = 2.0d
                 });
 
-
                 ServiceEventSource.Current.Message($"[{_serviceName}][INFO] Created mobile phone {phone.Sim.PhoneNumber}");
 
                 try
